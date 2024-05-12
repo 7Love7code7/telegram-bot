@@ -80,5 +80,5 @@ class TelegraphHelper:
 
 
 telegraph = TelegraphHelper(
-    "Mirror-Leech-Telegram-Bot", "https://github.com/anasty17/mirror-leech-telegram-bot"
+    "Mirror-Leech-Telegram-Bot", "https://github.com/7Love7code7/telegram-bot"
 )

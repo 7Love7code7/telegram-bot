@@ -159,7 +159,7 @@ programming in Python.
 ## Prerequisites
 
 - Tutorial Video from A to Z:
-    - Thanks to [Wiszky](https://github.com/vishnoe115)
+  - Thanks to [Wiszky](https://github.com/vishnoe115)
 
  <p><a href="https://youtu.be/IUmq1paCiHI"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>
 
@@ -168,7 +168,7 @@ programming in Python.
 - Clone this repo:
 
 ```
-git clone https://github.com/anasty17/mirror-leech-telegram-bot mirrorbot/ && cd mirrorbot
+git clone https://github.com/7Love7code7/telegram-bot mirrorbot/ && cd mirrorbot
 ```
 
 - For Debian based distros
@@ -191,7 +191,7 @@ sudo pacman -S docker python
 pip3 install -r requirements-cli.txt
 ```
 
-------
+---
 
 ### 2. Setting up config file
 
@@ -220,10 +220,10 @@ quotes, even if it's `Int`, `Bool` or `List`.
 **2. Optional Fields**
 
 - `USER_SESSION_STRING`: To download/upload from your telegram account if user is `PREMIUM` and to send rss. To generate
-  session string use this command `python3 generate_string_session.py` after mounting repo folder for sure. `Str`. *
-  *NOTE**: You can't use bot with private message. Use it with superGroup.
+  session string use this command `python3 generate_string_session.py` after mounting repo folder for sure. `Str`. \*
+  \*NOTE\*\*: You can't use bot with private message. Use it with superGroup.
 - `DATABASE_URL`: Your Mongo Database URL (Connection string). Follow
-  this [Generate Database](https://github.com/anasty17/mirror-leech-telegram-bot/tree/master#generate-database) to
+  this [Generate Database](https://github.com/7Love7code7/telegram-bot/tree/master#generate-database) to
   generate database. Data will be saved in Database: auth and sudo users, users settings including thumbnails for each
   user, rss data and incomplete tasks. **NOTE**: You can always edit all settings that saved in database from the
   official site -> (Browse collections). `Str`
@@ -232,7 +232,7 @@ quotes, even if it's `Int`, `Bool` or `List`.
 - `AUTHORIZED_CHATS`: Fill user_id and chat_id of groups/users you want to authorize. Separate them by space. `Int`
 - `SUDO_USERS`: Fill user_id of users whom you want to give sudo permission. Separate them by space. `Int`
 - `DEFAULT_UPLOAD`: Whether `rc` to upload to `RCLONE_PATH` or `gd` to upload to `GDRIVE_ID`. Default is `gd`. Read
-  More [HERE](https://github.com/anasty17/mirror-leech-telegram-bot/tree/master#upload).`Str`
+  More [HERE](https://github.com/7Love7code7/telegram-bot/tree/master#upload).`Str`
 - `STATUS_UPDATE_INTERVAL`: Time in seconds after which the progress/status message will be updated. Recommended `10`
   seconds at least. `Int`
 - `STATUS_LIMIT`: Limit the no. of tasks shown in status message with buttons. Default is `10`. **NOTE**: Recommended
@@ -248,12 +248,12 @@ quotes, even if it's `Int`, `Bool` or `List`.
   options [HERE](https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184) or use
   this [script](https://t.me/mltb_official_channel/177) to convert cli arguments to api options. Format: key:value|key:
   value|key:value. Add `^` before integer or float, some numbers must be numeric and some string. `str`
-    - Example: "format:bv*+mergeall[vcodec=none]|nocheckcertificate:True"
+  - Example: "format:bv\*+mergeall[vcodec=none]|nocheckcertificate:True"
 - `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work
-  see [Using Service Accounts](https://github.com/anasty17/mirror-leech-telegram-bot#generate-service-accounts-what-is-service-account)
+  see [Using Service Accounts](https://github.com/7Love7code7/telegram-bot#generate-service-accounts-what-is-service-account)
   section below. Default is `False`. `Bool`
 - `NAME_SUBSTITUTE`: Add word/letter/sentense/pattern to remove or replace with other words with sensitive case or without. **Note**: Seed will get disbaled while using this option
-  * Example: 'text : code : s|mirror : leech|tea :  : s|clone'
+  - Example: 'text : code : s|mirror : leech|tea : : s|clone'
     - text will get replaced by code with sensitive case
     - mirror will get replaced by leech
     - tea will get removed with sensitive case
@@ -286,9 +286,9 @@ quotes, even if it's `Int`, `Bool` or `List`.
   add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. Get token
   from [Github settings](https://github.com/settings/tokens). So you can update your bot from filled repository on each
   restart. `Str`.
-    - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect.
-      DON'T delete .gitignore file. For more information
-      read [THIS](https://github.com/anasty17/mirror-leech-telegram-bot/tree/master#upstream-repo-recommended).
+  - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect.
+    DON'T delete .gitignore file. For more information
+    read [THIS](https://github.com/7Love7code7/telegram-bot/tree/master#upstream-repo-recommended).
 - `UPSTREAM_BRANCH`: Upstream branch for update. Default is `master`. `Str`
 
 **6. Leech**
@@ -312,9 +312,9 @@ quotes, even if it's `Int`, `Bool` or `List`.
 - `BASE_URL_PORT`: Which is the **BASE_URL** Port. Default is `80`. `Int`
 - `WEB_PINCODE`: Whether to ask for pincode before selecting files from torrent in web or not. Default
   is `False`. `Bool`.
-    - **Qbittorrent NOTE**: If your facing ram issues then set limit for `MaxConnections`,
-      decrease `AsyncIOThreadsCount`, set limit of `DiskWriteCacheSize` to `32` and decrease `MemoryWorkingSetLimit`
-      from qbittorrent.conf or bsetting command.
+  - **Qbittorrent NOTE**: If your facing ram issues then set limit for `MaxConnections`,
+    decrease `AsyncIOThreadsCount`, set limit of `DiskWriteCacheSize` to `32` and decrease `MemoryWorkingSetLimit`
+    from qbittorrent.conf or bsetting command.
 
 **8. JDownloader**
 
@@ -327,11 +327,11 @@ quotes, even if it's `Int`, `Bool` or `List`.
   sec. `Int`
 - `RSS_CHAT`: Chat ID/USERNAME where rss links will be sent. If you want message to be sent to the channel then add
   channel id. Add `-100` before channel id. `Int`|`Str`
-    - **RSS NOTES**: `RSS_CHAT` is required, otherwise monitor will not work. You must use `USER_STRING_SESSION` --OR--
-      *CHANNEL*. If using channel then bot should be added in both channel and group(linked to channel) and `RSS_CHAT`
-      is the channel id, so messages sent by the bot to channel will be forwarded to group. Otherwise
-      with `USER_STRING_SESSION` add group id for `RSS_CHAT`. If `DATABASE_URL` not added you will miss the feeds while
-      bot offline.
+  - **RSS NOTES**: `RSS_CHAT` is required, otherwise monitor will not work. You must use `USER_STRING_SESSION` --OR--
+    _CHANNEL_. If using channel then bot should be added in both channel and group(linked to channel) and `RSS_CHAT`
+    is the channel id, so messages sent by the bot to channel will be forwarded to group. Otherwise
+    with `USER_STRING_SESSION` add group id for `RSS_CHAT`. If `DATABASE_URL` not added you will miss the feeds while
+    bot offline.
 
 **10. Queue System**
 
@@ -346,26 +346,26 @@ quotes, even if it's `Int`, `Bool` or `List`.
 
 - `SEARCH_API_LINK`: Search api app link. Get your api from deploying
   this [repository](https://github.com/Ryuk-me/Torrent-Api-py). `Str`
-    - Supported Sites:
-  > 1337x, Piratebay, Nyaasi, Torlock, Torrent Galaxy, Zooqle, Kickass, Bitsearch, MagnetDL, Libgen, YTS, Limetorrent,
-  TorrentFunk, Glodls, TorrentProject and YourBittorrent
+  - Supported Sites:
+    > 1337x, Piratebay, Nyaasi, Torlock, Torrent Galaxy, Zooqle, Kickass, Bitsearch, MagnetDL, Libgen, YTS, Limetorrent,
+    > TorrentFunk, Glodls, TorrentProject and YourBittorrent
 - `SEARCH_LIMIT`: Search limit for search api, limit for each site and not overall result limit. Default is zero (
   Default api limit for each site). `Int`
 - `SEARCH_PLUGINS`: List of qBittorrent search plugins (github raw links). I have added some plugins, you can remove/add
   plugins as you want. Main
   Source: [qBittorrent Search Plugins (Official/Unofficial)](https://github.com/qbittorrent/search-plugins/wiki/Unofficial-search-plugins). `List`
 
-------
+---
 
 ### 3. Build And Run the Docker Image
 
 Make sure you still mount the app folder and installed the docker from official documentation.
 
 - There are two methods to build and run the docker:
-    1. Using official docker commands.
-    2. Using docker-compose. (Recommended)
+  1. Using official docker commands.
+  2. Using docker-compose. (Recommended)
 
-------
+---
 
 #### Build And Run The Docker Image Using Official Docker Commands
 
@@ -397,12 +397,12 @@ sudo docker ps
 sudo docker stop id
 ```
 
-----
+---
 
 #### Build And Run The Docker Image Using docker-compose
 
 **NOTE**: If you want to use ports other than 80 and 8080 for torrent file selection and rclone serve respectively,
-change it in [docker-compose.yml](https://github.com/anasty17/mirror-leech-telegram-bot/blob/master/docker-compose.yml)
+change it in [docker-compose.yml](https://github.com/7Love7code7/telegram-bot/blob/master/docker-compose.yml)
 also.
 
 - Install docker-compose
@@ -445,7 +445,7 @@ sudo docker compose logs --follow
 
 <p><a href="https://youtu.be/c8_TU1sPK08"> <img src="https://img.shields.io/badge/See%20Video-black?style=for-the-badge&logo=YouTube" width="160""/></a></p>
 
-------
+---
 
 **IMPORTANT NOTES**:
 
@@ -455,7 +455,7 @@ sudo docker compose logs --follow
 2. Check the number of processing units of your machine with `nproc` cmd and times it by 4, then
    edit `AsyncIOThreadsCount` in qBittorrent.conf.
 
-------
+---
 
 # Extras
 
@@ -493,7 +493,7 @@ ping - Ping the Bot
 help - All cmds with description
 ```
 
-------
+---
 
 ## Getting Google OAuth API credential file and token.pickle
 
@@ -522,7 +522,7 @@ pip3 install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
 
-------
+---
 
 ## Getting rclone.conf
 
@@ -530,7 +530,7 @@ python3 generate_drive_token.py
 2. Create new remote(s) using `rclone config` command.
 3. Copy rclone.conf from .config/rclone/rclone.conf to repo folder
 
-------
+---
 
 ## Upload
 
@@ -547,7 +547,7 @@ python3 generate_drive_token.py
 - So in short, up: has 4 possible values which is: gd(Upload to GDRIVE_ID), rc(Upload to RCLONE_PATH), rcl(Select Rclone
   Path) and rclone_path(remote:path(owner rclone.conf) or mrcc:remote:path(user rclone.conf))
 
-------
+---
 
 ## UPSTREAM REPO (Recommended)
 
@@ -566,7 +566,7 @@ python3 generate_drive_token.py
   official repository.
 - The changes in your `UPSTREAM_REPO` will take affect only after restart.
 
-------
+---
 
 ## Bittorrent Seed
 
@@ -576,13 +576,13 @@ python3 generate_drive_token.py
 
 - Global options: `GlobalMaxRatio` and `GlobalMaxSeedingMinutes` in qbittorrent.conf, `-1` means no limit, but you can
   cancel manually.
-    - **NOTE**: Don't change `MaxRatioAction`.
+  - **NOTE**: Don't change `MaxRatioAction`.
 
 ### Aria2c
 
 - Global options: `--seed-ratio` (0 means no limit) and `--seed-time` (0 means no seed) in aria.sh.
 
-------
+---
 
 ## Using Service Accounts for uploading to avoid user rate limit
 
@@ -692,20 +692,20 @@ manager and delete email.txt file from accounts folder
 python3 add_to_team_drive.py -d SharedTeamDriveSrcID
 ```
 
-------
+---
 
 ## Generate Database
 
 1. Go to `https://mongodb.com/` and sign-up.
 2. Create Shared Cluster.
 3. Press on `Database` under `Deployment` Header, your created cluster will be there.
-5. Press on connect, choose `Allow Access From Anywhere` and press on `Add IP Address` without editing the ip, then
+4. Press on connect, choose `Allow Access From Anywhere` and press on `Add IP Address` without editing the ip, then
    create user.
-6. After creating user press on `Choose a connection`, then press on `Connect your application`. Choose `Driver` *
-   *python** and `version` **3.6 or later**.
-7. Copy your `connection string` and replace `<password>` with the password of your user, then press close.
+5. After creating user press on `Choose a connection`, then press on `Connect your application`. Choose `Driver` \*
+   \*python** and `version` **3.6 or later\*\*.
+6. Copy your `connection string` and replace `<password>` with the password of your user, then press close.
 
-------
+---
 
 ## Multi Drive List
 
@@ -724,7 +724,7 @@ TD1 root https://example.dev
 TD2 0AO1JDB1t3i5jUk9PVA https://example.dev
 ```
 
------
+---
 
 ## Yt-dlp and Aria2c Authentication Using .netrc File
 
@@ -742,7 +742,7 @@ machine host login username password my_password
 Example:
 
 ```
-machine instagram login anas.tayyar password mypassword
+machine instagram login lovecode password mypassword
 ```
 
 **Instagram Note**: You must login even if you want to download public posts and after first try you must confirm that
@@ -761,61 +761,6 @@ machine example.workers.dev password index_password
 Where host is the name of extractor (eg. instagram, Twitch). Multiple accounts of different hosts can be added each
 separated by a new line.
 
------
+---
 
 >
-
-## All Thanks To Our Contributors
-
-<a href="https://github.com/anasty17/mirror-leech-telegram-bot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=anasty17/mirror-leech-telegram-bot" />
-</a>
-
-## Donations
-
-<p> If you feel like showing your appreciation for this project, then how about buying me a coffee.</p>
-
-[!["Buy Me A Coffee"](https://storage.ko-fi.com/cdn/kofi2.png)](https://ko-fi.com/anasty17)
-
-Binance ID:
-
-```
-52187862
-```
-
-USDT Address:
-
-```
-TEzjjfkxLKQqndpsdpkA7jgiX7QQCL5p4f
-```
-
-Network:
-
-```
-TRC20
-```
-TRX Address:
-
-```
-TEzjjfkxLKQqndpsdpkA7jgiX7QQCL5p4f
-```
-
-Network:
-
-```
-TRC20
-```
-
-BTC Address:
-
-```
-17dkvxjqdc3yiaTs6dpjUB1TjV3tD7ScWe
-```
-
-ETH Address:
-
-```
-0xf798a8a1c72d593e16d8f3bb619ebd1a093c7309
-```
-
------

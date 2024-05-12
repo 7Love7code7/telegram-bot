@@ -229,13 +229,13 @@ function s_validate() {
           src="https://telegra.ph/file/43af672249c94053356c7.jpg"
           alt="logo"
         />
-        <a href="https://t.me/anas_tayyar">
+        <a href="https://t.me/bestservicehere">
           <h2 class="name">Bittorrent Selection</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.github.com/7Love7code7/telegram-bot"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/bestservicehere"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <div id="sticks">
@@ -621,13 +621,13 @@ section span{
           src="https://telegra.ph/file/43af672249c94053356c7.jpg"
           alt="logo"
         />
-        <a href="https://t.me/anas_tayyar">
+        <a href="https://t.me/bestservicehere">
           <h2 class="name">Bittorrent Selection</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.github.com/7Love7code7/telegram-bot"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/bestservicehere"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
@@ -782,7 +782,7 @@ def set_priority(id_):
 
 @app.route("/")
 def homepage():
-    return "<h1>See mirror-leech-telegram-bot <a href='https://www.github.com/anasty17/mirror-leech-telegram-bot'>@GitHub</a> By <a href='https://github.com/anasty17'>Anas</a></h1>"
+    return "<h1>See mirror-leech-telegram-bot <a href='https://www.github.com/7Love7code7/telegram-bot'>@GitHub</a> By <a href='https://github.com/7Love7code7'>7Love7code7</a></h1>"
 
 
 @app.errorhandler(Exception)
